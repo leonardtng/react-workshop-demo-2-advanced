@@ -1,0 +1,14 @@
+.data-table {
+  width: 100%;
+}
+
+thead {
+  background-color: #333;
+  color: #ffffff;
+}
+
+td {
+  text-align: center;
+  width: 100px;
+  border: 1px solid #333;
+}
