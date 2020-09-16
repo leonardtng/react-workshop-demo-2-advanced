@@ -2,7 +2,7 @@
   YNC Hacks: Introduction to React
 </h1>
 <p align="center">
-  Covid-19 Data fetch
+  Covid-19 Data Fetch
 </p>
 
 ## ❓ Notes
