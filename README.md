@@ -11,6 +11,8 @@ The objective of the second session of Introduction to React is to call open API
 
 ## 👍 How to Use This Repository
 
+This repository uses the axios library to perform requests, so do ensure that it is installed before running the application
+
 ## 🛠 Installation & Set Up
 
 1. Install dependencies
