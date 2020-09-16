@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import DataTable from './DataTable';
 import axios from 'axios';
@@ -21,25 +21,25 @@ const App = () => {
 
   useEffect(() => {
     axios.get('https://covid19.mathdro.id/api')
-    .then(function (response) {
+    .then((response) => {
       setResult(prev => ({...prev, world: response.data}));
       setIsLoading(false);
     })
-    .catch(function (error) {
+    .catch((error) => {
       console.log(error);
     })
-    .then(function () {
-      console.log('[WORLD] Unexpected Error');
+    .then(() => {
+      console.log('[WORLD] Unexpected Error'); // This always runs
     });
     axios.get('https://covid19.mathdro.id/api/countries/singapore')
-      .then(function (response) {
+      .then((response) => {
         setResult(prev => ({...prev, singapore: response.data}));
         setIsLoading(false);
       })
-      .catch(function (error) {
+      .catch((error) => {
         console.log(error);
       })
-      .then(function () {
+      .then(() => {
         console.log('[SINGAPORE] Unexpected Error');
       });
   }, []);
@@ -51,9 +51,7 @@ const App = () => {
       </header>
       <section>
         {isLoading ? (
-          <Fragment>
             <span>Loading...</span>
-          </Fragment>
         ) : (
             <DataTable data={result} />
           )}
