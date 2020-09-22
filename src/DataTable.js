@@ -14,16 +14,10 @@ const DataTable = (props) => {
       </thead>
       <tbody>
         <tr>
-          <td>World</td>
-          <td>{props.data.world.confirmed.value}</td>
-          <td>{props.data.world.recovered.value}</td>
-          <td>{props.data.world.deaths.value}</td>
-        </tr>
-        <tr>
-          <td>Singapore</td>
-          <td>{props.data.singapore.confirmed.value}</td>
-          <td>{props.data.singapore.recovered.value}</td>
-          <td>{props.data.singapore.deaths.value}</td>
+          <td>{props.country}</td>
+          <td>{props.data.confirmed.value}</td>
+          <td>{props.data.recovered.value}</td>
+          <td>{props.data.deaths.value}</td>
         </tr>
       </tbody>
 

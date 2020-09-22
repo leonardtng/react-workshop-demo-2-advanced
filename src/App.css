@@ -11,3 +11,11 @@
   font-size: x-large;
   margin: 50px;
 }
+
+section {
+  margin-bottom: 20px;
+}
+
+button {
+  margin: 10px;
+}

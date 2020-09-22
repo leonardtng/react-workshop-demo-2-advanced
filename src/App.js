@@ -16,33 +16,20 @@ const initialCovidData = {
 }
 
 const App = () => {
-  const [result, setResult] = useState({world: initialCovidData, singapore: initialCovidData});
+  const [result, setResult] = useState(initialCovidData);
   const [isLoading, setIsLoading] = useState(true);
+  const [country, setCountry] = useState('Singapore');
 
   useEffect(() => {
-    axios.get('https://covid19.mathdro.id/api')
-    .then((response) => {
-      setResult(prev => ({...prev, world: response.data}));
-      setIsLoading(false);
-    })
-    .catch((error) => {
-      console.log(error);
-    })
-    .then(() => {
-      console.log('[WORLD] Unexpected Error'); // This always runs
-    });
-    axios.get('https://covid19.mathdro.id/api/countries/singapore')
+    axios.get('https://covid19.mathdro.id/api/countries/' + country)
       .then((response) => {
-        setResult(prev => ({...prev, singapore: response.data}));
+        setResult(prev => (response.data));
         setIsLoading(false);
       })
       .catch((error) => {
         console.log(error);
       })
-      .then(() => {
-        console.log('[SINGAPORE] Unexpected Error');
-      });
-  }, []);
+  }, [country])
 
   return (
     <div className="App">
@@ -51,11 +38,19 @@ const App = () => {
       </header>
       <section>
         {isLoading ? (
-            <span>Loading...</span>
+          <span>Loading...</span>
         ) : (
-            <DataTable data={result} />
+            <DataTable country={country} data={result} />
           )}
       </section>
+      <div>
+        <button onClick={() => setCountry('USA')}>
+          Change to USA
+      </button>
+        <button onClick={() => setCountry('Singapore')}>
+          Change to Singapore
+        </button>
+      </div>
     </div>
   );
 }
