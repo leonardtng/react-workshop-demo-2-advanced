@@ -7,7 +7,9 @@
 
 ## ❓ Notes
 
-This repository builds on the code from the second session of the workshop. Here, we use the dependency array of the useEffect hook to call the API multiple times based on a button click. You can view the code for a beefed up Covid-19 data fetch example website [here](https://github.com/leonardtng/fancy-covid-data), and a live demo of it can be found [here](http://fancy-covid-data.s3-website-ap-southeast-1.amazonaws.com/)
+This repository builds on the code from the second session of the workshop. Here, we use the dependency array of the useEffect hook to call the API multiple times based on a button click. You can view the code for a beefed up Covid-19 data fetch example website [here](https://github.com/leonardtng/fancy-covid-data), and a live demo of it can be found [here](http://fancy-covid-data.s3-website-ap-southeast-1.amazonaws.com/)!
+
+Slides for the session are [here](https://drive.google.com/file/d/1mlVwcM-7iRZg18lt_ey_ndnxWACMPWES/view?usp=sharing).
 
 ## 👍 How to Use This Repository
 
